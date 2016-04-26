@@ -57,7 +57,7 @@
           sliced: true,
           selected: true
         }, {
-          name: 'Termo de parceiria',
+          name: 'Termo de parceria',
           y: 10.38
         }]
       }],
@@ -113,7 +113,7 @@
         name: 'Convênio',
         data: [2, 8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
       }, {
-        name: 'Termo de parceiria',
+        name: 'Termo de parceria',
         data: [9, 6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
       }],
       //Title configuration (optional)
@@ -185,7 +185,7 @@
         data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
 
       }, {
-        name: 'Termo de parceiria',
+        name: 'Termo de parceria',
         data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
 
       }],
