@@ -3,9 +3,15 @@ language: php
 php:
   - '7.0'
 
+services:
+  - mongodb
+
 before_script:
+  - phpenv config-add myconfig.ini
   - composer self-update
   - composer install --dev
+  - sleep 15
+  - mongo mydb_test --eval 'db.addUser("travis", "test");'
 
 script:
   - ./vendor/bin/phpunit
