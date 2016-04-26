@@ -16,7 +16,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'highcharts-ng',
+    'publicApp.convenioApp'
   ])
   .config(function ($routeProvider) {
     $routeProvider
