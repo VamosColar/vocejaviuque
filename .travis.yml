@@ -1,0 +1,23 @@
+language: php
+
+php:
+  - '7.0'
+
+services:
+  - mongodb
+
+before_script:
+  - cp .env.example .env
+  - phpenv config-add myconfig.ini
+  - composer self-update
+  - composer install --dev
+  - mongo mydb_test --eval 'db.addUser("travis", "test");'
+  - php artisan key:generate
+
+script:
+  - ./vendor/bin/phpunit
+
+# whitelist
+branches:
+  only:
+    - dev

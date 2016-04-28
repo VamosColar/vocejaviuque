@@ -15,7 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('convenios', function(){
+Route::get('convenios', function() {
     $convenios = new \Vjvq\Convenios\Convenios();
     return response()->json($convenios->save());
+});
+
+Route::get('ola-mundo', function () {
+    echo 'Hello World';
 });
