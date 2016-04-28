@@ -26,7 +26,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    //'default' => env('DB_CONNECTION', 'mongodb'),
+    'default' => 'mongodb',
 
     /*
     |--------------------------------------------------------------------------
@@ -76,6 +77,15 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
+        ],
+
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'host' => 'localhost',
+            'port' => '27017',
+            'database' => 'vocejaviuque',
+            'username' => 'homestead',
+            'password' => 'secret',
         ],
 
     ],
