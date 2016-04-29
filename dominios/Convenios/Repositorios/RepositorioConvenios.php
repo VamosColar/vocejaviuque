@@ -43,4 +43,24 @@ class RepositorioConvenios
         $this->convenio->save();
         return $this->convenio;
     }
+
+    public function all()
+    {
+        return $this->convenio->all();
+    }
+
+    public function getWhere(array $where)
+    {
+        $convenios = $this->convenio->orderBy('id');
+
+        if (isset($where['pagination'])) {
+            if (is_null($where['pagination']) || $where['pagination'] == '') {
+                throw new \Exception('Deve ser informado um valor para a paginação');
+            }
+
+            return $convenios->paginate((int)$where['pagination']);
+        }
+
+        return $convenios->get();
+    }
 }

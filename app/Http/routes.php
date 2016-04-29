@@ -20,6 +20,8 @@ Route::get('convenios', function() {
     return response()->json($convenios->save());
 });
 
-Route::get('ola-mundo', function () {
-    echo 'Hello World';
+Route::get('todos-convenios', function (\Illuminate\Http\Request $request) {
+    $nConvenios = new \Vjvq\Consultas\Convenio();
+
+    var_dump($nConvenios->all($request->all()));
 });

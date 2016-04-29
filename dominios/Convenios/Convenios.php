@@ -49,7 +49,7 @@ class Convenios
 
 
         } while ($totalRegistros > $offset);
-        
+
         return $convenio;
     }
 
