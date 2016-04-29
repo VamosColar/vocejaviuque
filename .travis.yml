@@ -12,6 +12,7 @@ before_script:
   - composer self-update
   - composer install --dev
   - mongo mydb_test --eval 'db.addUser("travis", "test");'
+  - mongo vocejaviuque --eval 'db.addUser("homestead", "secret");'
   - php artisan key:generate
 
 script:

@@ -20,6 +20,12 @@ Route::get('convenios', function () {
     return response()->json($convenios->save());
 });
 
+Route::get('todos-convenios', function (\Illuminate\Http\Request $request) {
+    $nConvenios = new \Vjvq\Consultas\Convenio();
+
+    var_dump($nConvenios->all($request->all()));
+});
+
 Route::get('municipios', function () {
     $municipios = new \Vjvq\Importacao\Proponentes\Municipios();
     return response()->json($municipios->save());
@@ -28,8 +34,4 @@ Route::get('municipios', function () {
 Route::get('programas', function () {
     $programas = new \Vjvq\Importacao\Programas\Programas();
     return response()->json($programas->save());
-});
-
-Route::get('ola-mundo', function () {
-    echo 'Hello World';
 });

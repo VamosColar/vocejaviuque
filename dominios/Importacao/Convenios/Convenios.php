@@ -2,8 +2,8 @@
 declare(strict_types = 1);
 namespace Vjvq\Importacao\Convenios;
 
-use Vjvq\Convenios\Models\ConvenioModel;
-use Vjvq\Convenios\Repositorios\RepositorioConvenios;
+use Vjvq\Importacao\Convenios\Models\ConvenioModel;
+use Vjvq\Importacao\Convenios\Repositorios\RepositorioConvenios;
 
 class Convenios
 {
@@ -17,13 +17,16 @@ class Convenios
 
     protected function getJson(int $offset)
     {
-        if ($offset == 0) {
-            $convenios = file_get_contents('http://api.convenios.gov.br/siconv/v1/consulta/convenios.json');
-        } else {
-            $convenios = file_get_contents('http://api.convenios.gov.br/siconv/v1/consulta/convenios.json?offset=' . $offset);
+        $url = 'http://api.convenios.gov.br/siconv/v1/consulta/convenios.json?offset=' . $offset;
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $programas = curl_exec($ch);
+        $info = curl_getinfo($ch);
+        if ($info['http_code'] == 0) {
+            return false;
         }
-
-        return json_decode($convenios);
+        return json_decode($programas);
     }
 
     public function save()
@@ -39,18 +42,18 @@ class Convenios
             $convenios = $this->getJson($offset);
             if (count($convenios->convenios) != 0) {
                 if ($totalRegistros == 0) {
-                    $totalRegistros = $convenios->metadados->totalRegistros;
+                    $totalRegistros = $convenios->metadados->total_registros;
                 }
                 foreach ($convenios->convenios as $c) {
-                    $convenio = $this->rConvenios->save(self::tratarVariaveis($c));
+                    $this->rConvenios->save(self::tratarVariaveis($c));
                 }
                 $offset = 500;
             }
 
 
         } while ($totalRegistros > $offset);
-        
-        return $convenio;
+
+        return true;
     }
 
     protected function tratarVariaveis($convenio)
