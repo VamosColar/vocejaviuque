@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('convenios', function() {
+Route::get('convenios', function () {
     $convenios = new \Vjvq\Convenios\Convenios();
     return response()->json($convenios->save());
 });
@@ -24,4 +24,9 @@ Route::get('todos-convenios', function (\Illuminate\Http\Request $request) {
     $nConvenios = new \Vjvq\Consultas\Convenio();
 
     var_dump($nConvenios->all($request->all()));
+});
+
+Route::get('municipios', function () {
+    $municipios = new \Vjvq\Proponentes\Municipios();
+    return response()->json($municipios->save());
 });
