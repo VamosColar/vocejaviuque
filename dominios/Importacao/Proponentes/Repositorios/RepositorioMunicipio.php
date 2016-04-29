@@ -1,7 +1,7 @@
 <?php
-namespace Vjvq\Proponentes\Repositorios;
+namespace Vjvq\Importacao\Proponentes\Repositorios;
 
-use Vjvq\Proponentes\Models\MunicipioModel;
+use Vjvq\Importacao\Proponentes\Models\MunicipioModel;
 
 class RepositorioMunicipio
 {

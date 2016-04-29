@@ -16,13 +16,18 @@ Route::get('/', function () {
 });
 
 Route::get('convenios', function () {
-    $convenios = new \Vjvq\Convenios\Convenios();
+    $convenios = new \Vjvq\Importacao\Convenios\Convenios();
     return response()->json($convenios->save());
 });
 
 Route::get('municipios', function () {
-    $municipios = new \Vjvq\Proponentes\Municipios();
+    $municipios = new \Vjvq\Importacao\Proponentes\Municipios();
     return response()->json($municipios->save());
+});
+
+Route::get('programas', function () {
+    $programas = new \Vjvq\Importacao\Programas\Programas();
+    return response()->json($programas->save());
 });
 
 Route::get('ola-mundo', function () {

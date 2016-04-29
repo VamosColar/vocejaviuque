@@ -1,6 +1,6 @@
 <?php
 declare(strict_types = 1);
-namespace Vjvq\Convenios;
+namespace Vjvq\Importacao\Convenios;
 
 use Vjvq\Convenios\Models\ConvenioModel;
 use Vjvq\Convenios\Repositorios\RepositorioConvenios;

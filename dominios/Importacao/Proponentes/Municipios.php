@@ -1,10 +1,10 @@
 <?php
 declare(strict_types = 1);
-namespace Vjvq\Proponentes;
+namespace Vjvq\Importacao\Proponentes;
 
-use Vjvq\Proponentes\Models\MunicipioModel;
-use Vjvq\Proponentes\Models\ProponentesModel;
-use Vjvq\Proponentes\Repositorios\RepositorioMunicipio;
+use Vjvq\Importacao\Proponentes\Models\MunicipioModel;
+use Vjvq\Importacao\Proponentes\Models\ProponentesModel;
+use Vjvq\Importacao\Proponentes\Repositorios\RepositorioMunicipio;
 
 class Municipios
 {

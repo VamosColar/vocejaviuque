@@ -1,5 +1,5 @@
 <?php
-namespace Vjvq\Convenios\Models;
+namespace Vjvq\Importacao\Convenios\Models;
 
 use Jenssegers\Mongodb\Eloquent\Model;
 

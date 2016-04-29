@@ -1,7 +1,7 @@
 <?php
-namespace Vjvq\Proponentes\Repositorios;
+namespace Vjvq\Importacao\Proponentes\Repositorios;
 
-use Vjvq\Proponentes\Models\ProponentesModel;
+use Vjvq\Importacao\Proponentes\Models\ProponentesModel;
 
 class RepositorioProponente
 {

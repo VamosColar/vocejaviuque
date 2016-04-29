@@ -1,9 +1,9 @@
 <?php
 declare(strict_types = 1);
-namespace Vjvq\Proponentes;
+namespace Vjvq\Importacao\Proponentes;
 
-use Vjvq\Proponentes\Models\ProponentesModel;
-use Vjvq\Proponentes\Repositorios\RepositorioProponente;
+use Vjvq\Importacao\Proponentes\Models\ProponentesModel;
+use Vjvq\Importacao\Proponentes\Repositorios\RepositorioProponente;
 
 class Proponentes
 {

@@ -1,7 +1,7 @@
 <?php
-namespace Vjvq\Convenios\Repositorios;
+namespace Vjvq\Importacao\Convenios\Repositorios;
 
-use Vjvq\Convenios\Models\ConvenioModel;
+use Vjvq\Importacao\Convenios\Models\ConvenioModel;
 
 class RepositorioConvenios
 {

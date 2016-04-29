@@ -1,5 +1,5 @@
 <?php
-namespace Vjvq\Proponentes\Models;
+namespace Vjvq\Importacao\Proponentes\Models;
 
 use Jenssegers\Mongodb\Eloquent\Model;
 
