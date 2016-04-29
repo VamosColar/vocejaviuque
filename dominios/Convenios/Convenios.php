@@ -28,7 +28,7 @@ class Convenios
 
     public function save()
     {
-        $totalRegistros = 500;
+        $totalRegistros = 0;
         $offset = 0;
         $mConvenio = new ConvenioModel();
         $mConvenio = $mConvenio->query();
